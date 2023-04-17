@@ -1,30 +1,70 @@
 body {
+  background-color: #606470;
   padding: 0;
   margin: 0;
+  font-family: "2P", sans-serif;
 }
 
+@font-face {
+  font-family: "2P";
+  src: url("./fonts/PressStart2P.ttf") format("truetype");
+}
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 80px;
-  top: 0;
-  left: 0;
-  width: 100%;
+  height: 5rem;
+  font-size: 2rem;
   background-color: #323643;
 }
 
-.navlink {
-  color: #f7f7f7;
-}
-
-.navlink a:hover {
-  color: #91640f;
-}
-
-.container {
+a {
   display: flex;
+  color: #93deff;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  height: 5rem;
+  background: #93deff;
+  color: #fff;
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: #fff;
   background-color: #606470;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 95vh;
-  min-width: 100vw;
+  width: 100vw;
+}
+
+.left {
+  width: 25vw;
+  height: 50vh;
+}
+
+.right {
+  color: #fff;
+  display: flex;
+  font-size: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 2;
+  width: 50vw;
+  height: 50vh;
+}
+
+.alttext {
+  color: #93deff;
 }

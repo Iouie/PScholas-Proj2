@@ -7,13 +7,10 @@ function App() {
   return (
     <>
       <Nav />
-      <div className="container">
-        <h1>f</h1>
-        {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
-      </Routes> */}
-      </div>
+      </Routes>
     </>
   );
 }
