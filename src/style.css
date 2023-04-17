@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #323643;
+}
+
+.navlink {
+  color: #f7f7f7;
+}
+
+.navlink a:hover {
+  color: #91640f;
+}
+
+.container {
+  display: flex;
+  background-color: #606470;
+  min-height: 95vh;
+  min-width: 100vw;
+}
