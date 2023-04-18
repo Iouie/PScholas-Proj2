@@ -8,6 +8,7 @@ $shadow-color: grey;
 $alt-button-background: black;
 $alt-sec-button-background: #568ce2;
 $alt-shadow-color: grey;
+$menu_WIDTH: 150px;
 
 body {
   background-color: #606470;
@@ -165,7 +166,8 @@ a {
 
 .gamedescription,
 .gamegenre,
-.gameplatform {
+.gameplatform,
+.gamerelease {
   color: #fff;
   line-height: 2;
 }
@@ -175,6 +177,8 @@ span {
 }
 
 .gamethumbnail {
+  width: auto;
+  height: auto;
   border-radius: 20%;
 }
 
@@ -182,8 +186,8 @@ span {
   display: flex;
   justify-content: space-around;
 }
-.nextbutton,
-.previousbutton {
+.previousbutton,
+.nextbutton {
   width: 20vw;
   background-color: #606470;
   padding: 20px;
@@ -196,6 +200,7 @@ span {
   &:hover,
   &:focus {
     background: #93deff;
+    opacity: 0.1;
     box-shadow: inset (-$shadow-width * 1.5) (-$shadow-width * 1.5) 0px 0px
       #93deff;
   }
@@ -223,23 +228,143 @@ span {
   &:after {
     left: -$outline-width;
     top: 0;
-    border-left: $outline-width #93deff;
-    border-right: $outline-width #93deff;
+    border-left: $outline-width #606470;
+    border-right: $outline-width #606470;
   }
 
   &--proceed {
     background: $alt-button-background;
-    box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px #93deff;
+    box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px #606470;
 
     &:hover,
     &:focus {
       background: #93deff;
       box-shadow: inset (-$shadow-width * 1.5) (-$shadow-width * 1.5) 0px 0px
-        #93deff;
+        #606470;
     }
 
     &:active {
       box-shadow: inset $shadow-width $shadow-width 0px 0px #93deff;
     }
   }
+}
+
+.nextbutton {
+  z-index: 100;
+  position: fixed;
+  left: 200px;
+}
+
+.previousbutton {
+  position: fixed;
+  z-index: 100;
+}
+
+.pagenum {
+  text-align: center;
+  color: #93deff;
+}
+
+.eight-bit {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.eight-bit input {
+  width: 40vw;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+.eight-bit input:focus {
+  outline: none;
+  border-color: #93deff;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.main {
+  position: absolute;
+  z-index: 1;
+}
+
+.main li {
+  list-style: none;
+  background: #323643;
+  width: 100px;
+  padding: 0 5px;
+  border: 1px solid black;
+  height: 30px;
+
+  line-height: 30px;
+
+  -webkit-transition: all 0.5s ease-in-out;
+}
+.main li:hover {
+  background-color: #93deff;
+}
+
+.main li:nth-child(odd) {
+  -webkit-transform-origin: top;
+  -webkit-transform: perspective(350px) rotateX(-90deg);
+}
+
+.main li:nth-child(even) {
+  margin-top: -65px;
+  -webkit-transform-origin: bottom;
+  -webkit-transform: perspective(350px) rotateX(90deg);
+}
+
+/*.main {
+  
+  -webkit-transition: all .5s ease-in-out;
+  -webkit-transform-origin: 50% 0%;
+  -webkit-transform: perspective(350px) rotateX(-90deg);
+}
+
+.hov:hover .main {
+  
+  -webkit-transform-origin: top;
+  -webkit-transform: perspective(350px) rotateX(0deg);
+}*/
+
+.hov:hover li:nth-child(odd) {
+  -webkit-transform-origin: top;
+  -webkit-transform: perspective(350px) rotateX(0deg);
+  margin-top: 0;
+}
+
+.hov:hover li:nth-child(even) {
+  -webkit-transform-origin: bottom;
+  -webkit-transform: perspective(350px) rotateX(0deg);
+  margin-top: 0;
+}
+
+.main li:first-child {
+  margin-top: 0;
+}
+
+.hov {
+  position: relative;
+  height: 40px;
+  width: 112px;
+  background: #323643;
+  color: white;
+  font-size: 13px;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  list-style: none;
+  z-index: 2;
 }

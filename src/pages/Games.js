@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Inputs from "../components/Inputs";
 
 const Games = (props) => {
   const itemsPerPage = 20;
@@ -23,6 +24,8 @@ const Games = (props) => {
 
   return (
     <>
+      <Inputs data={props.data} getParams={props.getParams} />
+      <p className="pagenum">Current Page: {currentPage}</p>
       <div className="maingamecontainer">
         {currentData.map((eachGame) => {
           // map through each of the list and creates this
@@ -43,6 +46,9 @@ const Games = (props) => {
               <p className="gameplatform">
                 <span>Platform:</span> {eachGame.platform}
               </p>
+              <p className="gamerelease">
+                <span>Release Date:</span> {eachGame.release_date}
+              </p>
             </div>
           );
         })}
@@ -55,7 +61,6 @@ const Games = (props) => {
         >
           {currentPage}
         </button>
-        <p>Current Page: {currentPage}</p>
         <button
           onClick={handleNextPage}
           disabled={currentPage === 19}

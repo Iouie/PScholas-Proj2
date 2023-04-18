@@ -9,6 +9,7 @@ import { useState } from "react";
 const App = () => {
   const [data, setData] = useState([]);
   const [url, setUrl] = useState("latestnews");
+  const [params, setParams] = useState({});
   const secret_key = process.env.REACT_APP_API_KEY;
 
   // need to create function to pass down to childprops
@@ -16,10 +17,15 @@ const App = () => {
     setUrl(url);
   };
 
+  const changeParams = (p) => {
+    setParams(p);
+  };
+
   // fetch data from api
   const options = {
     method: "GET",
     url: `https://mmo-games.p.rapidapi.com/${url}`,
+    params: params,
     headers: {
       "X-RapidAPI-Key": secret_key,
       "X-RapidAPI-Host": "mmo-games.p.rapidapi.com",
@@ -44,7 +50,9 @@ const App = () => {
         <Route path="/news" element={<News data={data} getUrl={changeUrl} />} />
         <Route
           path="/games"
-          element={<Games data={data} getUrl={changeUrl} />}
+          element={
+            <Games data={data} getUrl={changeUrl} getParams={changeParams} />
+          }
         />
         <Route path="/games/:game" element={<GameItem />} />
       </Routes>
