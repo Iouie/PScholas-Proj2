@@ -3,12 +3,13 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Games from "./pages/Games";
+import GameItem from "./components/GameItem";
 import axios from "axios";
 import { useState } from "react";
 const App = () => {
   const [data, setData] = useState([]);
   const [url, setUrl] = useState("latestnews");
-  const secret_key = process.env.APIKEY;
+  const secret_key = process.env.REACT_APP_API_KEY;
 
   // need to create function to pass down to childprops
   const changeUrl = (url) => {
@@ -45,6 +46,7 @@ const App = () => {
           path="/games"
           element={<Games data={data} getUrl={changeUrl} />}
         />
+        <Route path="/games/:game" element={<GameItem />} />
       </Routes>
     </>
   );
