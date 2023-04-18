@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const Home = () => {
   const [textIndex, setTextIndex] = useState(0); // get index of array of text
-  const texts = ["GAMING NEWS", "GAME UPDATES", "GAMING INFORMATION"];
+  const texts = ["GAMES", "GAMING NEWS", "GAME UPDATES", "GAMING INFORMATION"];
   const [animationStyle, setAnimationStyle] = useState({}); // get state for animation
 
   useEffect(() => {

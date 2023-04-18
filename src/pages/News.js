@@ -1,7 +1,11 @@
-import axios from "axios";
+import NewsItem from "../components/NewsItem";
 
 const News = (props) => {
-  return <div className="newsContainer"></div>;
+  return (
+    <div>
+      <NewsItem />
+    </div>
+  );
 };
 
 export default News;
