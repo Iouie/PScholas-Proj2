@@ -4,6 +4,7 @@ import { useState } from "react";
 const NewsItem = (props) => {
   // create a state to store array of api list
   const [news, setNews] = useState([]);
+
   // fetch data from api
   const options = {
     method: "GET",
@@ -24,10 +25,20 @@ const NewsItem = (props) => {
       console.error(error);
     });
 
+  // function that opens url into a new tab
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
+
+  // store the mapped array into a newsList variable
   const newsList = news.map((eachNews) => {
-    // map through each of the list
+    // map through each of the list and creates this
     return (
-      <div className="newsContainer" key={eachNews.id}>
+      <div
+        className="newsContainer"
+        key={eachNews.id}
+        onClick={() => openInNewTab(eachNews.article_url)}
+      >
         <img
           src={eachNews.thumbnail}
           className="thumbnail"

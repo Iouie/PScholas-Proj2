@@ -83,6 +83,7 @@ a {
   margin: 10px;
   display: flex;
   gap: 3px;
+  border-color: #93deff;
 
   &:before {
     border: inherit;
@@ -96,6 +97,11 @@ a {
     right: -0.125em;
     z-index: -1;
   }
+}
+
+.newsContainer:hover {
+  background: #93deff;
+  cursor: pointer;
 }
 
 .newstitle {
