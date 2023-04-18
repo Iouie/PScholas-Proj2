@@ -81,7 +81,7 @@ const Games = (props) => {
         </button>
         <button
           onClick={handleNextPage}
-          disabled={currentPage === numPages}
+          disabled={currentPage >= numPages}
           className="previousbutton"
         >
           {currentPage + 1}

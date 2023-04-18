@@ -4,9 +4,8 @@ const Inputs = (props) => {
   useEffect(() => {
     // set number of pages based off filteredData length / 20 and round it up
     props.setnumPages(Math.ceil(props.filteredData.length / 20));
-  });
+  }, [props]);
 
-  console.log(props.numPages);
   return (
     <div className="eight-bit">
       <li className="hov">
