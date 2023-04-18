@@ -7,7 +7,8 @@ import axios from "axios";
 import { useState } from "react";
 const App = () => {
   const [data, setData] = useState([]);
-  const [url, setUrl] = useState("games");
+  const [url, setUrl] = useState("latestnews");
+  const secret_key = process.env.APIKEY;
 
   // need to create function to pass down to childprops
   const changeUrl = (url) => {
@@ -19,7 +20,7 @@ const App = () => {
     method: "GET",
     url: `https://mmo-games.p.rapidapi.com/${url}`,
     headers: {
-      "X-RapidAPI-Key": "3a9e06ea1bmsh011dc3857e0dbbdp1c6c49jsn1a19b90be73b",
+      "X-RapidAPI-Key": secret_key,
       "X-RapidAPI-Host": "mmo-games.p.rapidapi.com",
     },
   };
