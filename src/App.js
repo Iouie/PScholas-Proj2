@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import News from "./pages/News";
 import Games from "./pages/Games";
 import GameItem from "./components/GameItem";
+import Giveaway from "./pages/Giveaway";
 import axios from "axios";
 import { useState } from "react";
 const App = () => {
@@ -54,7 +55,10 @@ const App = () => {
             <Games data={data} getUrl={changeUrl} getParams={changeParams} />
           }
         />
-        <Route path="/games/:game" element={<GameItem />} />
+        <Route
+          path="/giveaway"
+          element={<Giveaway data={data} getUrl={changeUrl} />}
+        />
       </Routes>
     </>
   );

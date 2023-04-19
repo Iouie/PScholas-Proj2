@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+
 const Nav = (props) => {
   // state to check which nav a tag is clicked for css effects
   const [clicked, setClicked] = useState(localStorage.getItem("clicked"));
@@ -42,6 +43,14 @@ const Nav = (props) => {
           onClick={() => handleClick("games")}
         >
           GAMES
+        </div>
+      </Link>
+      <Link to="/giveaway">
+        <div
+          className={clicked === "giveaway" ? "active" : "unclicked"}
+          onClick={() => handleClick("giveaway")}
+        >
+          GIVEAWAY
         </div>
       </Link>
     </nav>
