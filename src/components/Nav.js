@@ -50,7 +50,7 @@ const Nav = (props) => {
           className={clicked === "giveaway" ? "active" : "unclicked"}
           onClick={() => handleClick("giveaway")}
         >
-          GIVEAWAY
+          GIVEAWAYS
         </div>
       </Link>
     </nav>

@@ -10,7 +10,7 @@ const Giveaway = (props) => {
     window.open(url, "_blank", "noreferrer");
   };
 
-  // store the mapped array into a newsList variable
+  // store the mapped array into a giveaway variable
   const giveawayList = props.data.map((eachGiveaway) => {
     // map through each of the list and creates this
     return (

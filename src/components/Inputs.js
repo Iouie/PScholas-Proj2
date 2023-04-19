@@ -41,6 +41,88 @@ const Inputs = (props) => {
           </li>
         </ul>
       </li>
+      <li className="hov">
+        Genres
+        <ul className="main">
+          <li
+            onClick={() => {
+              props.getParams({ category: "mmorpg" });
+            }}
+          >
+            MMORPG
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "mmo" });
+            }}
+          >
+            MMO
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "fantasy" });
+            }}
+          >
+            Fantasy
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "tower-defense" });
+            }}
+          >
+            Tower-Defense
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "shooter" });
+            }}
+          >
+            Shooter
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "moba" });
+            }}
+          >
+            MOBA
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "racing" });
+            }}
+          >
+            Racing
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "sports" });
+            }}
+          >
+            Sports
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "sandbox" });
+            }}
+          >
+            Sandbox
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "open-world" });
+            }}
+          >
+            Open-World
+          </li>
+          <li
+            onClick={() => {
+              props.getParams({ category: "battle-royale" });
+            }}
+          >
+            Battle-Royale
+          </li>
+        </ul>
+      </li>
       <input
         type="text"
         maxLength="20"
