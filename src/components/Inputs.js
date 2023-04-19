@@ -44,7 +44,7 @@ const Inputs = (props) => {
       <input
         type="text"
         maxLength="20"
-        placeholder="Enter Game Here"
+        placeholder="Enter Game Title Here"
         value={props.searchTerm}
         onChange={(e) => {
           props.setSearchTerm(e.target.value); // change search term to whatever I type

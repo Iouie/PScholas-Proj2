@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Inputs from "../components/Inputs";
+import GameItem from "../components/GameItem";
 
 const Games = (props) => {
   const itemsPerPage = 20;
@@ -34,7 +36,13 @@ const Games = (props) => {
   const allGames = currentData.map((eachGame) => {
     // map through each of the list and creates this
     return (
-      <div className="gameContainer" key={eachGame.id}>
+      <div
+        className="gameContainer"
+        key={eachGame.id}
+        onClick={() => {
+          props.getParams({ id: `${eachGame.id}` });
+        }}
+      >
         <h2>{eachGame.title}</h2>
         <img
           src={eachGame.thumbnail}

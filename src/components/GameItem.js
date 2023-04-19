@@ -1,5 +1,5 @@
 const GameItem = (props) => {
-  return <div>Herro</div>;
+  return <div className="poop">Herro</div>;
 };
 
 export default GameItem;
