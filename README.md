@@ -54,5 +54,5 @@ NewsItem => Stores each array of news data onto the News page
 I couldn't grab the screenshots of a single game and place it in the carousel.
 
 ## Future
-I want to create a login system that lets users store their liked and disliked games.
+I want to create a login system that lets users store their liked and disliked games. I also want to use Redux to manage my states.
 
