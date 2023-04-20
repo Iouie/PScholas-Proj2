@@ -50,9 +50,9 @@ Inputs => Stores all the inputs and dropdown buttons that lets user filter out t
 Nav => A permanent nav bar that lets user navigate to whatever page they want to see
 NewsItem => Stores each array of news data onto the News page
 
-##Unsolved Problems
+## Unsolved Problems
 I couldn't grab the screenshots of a single game and place it in the carousel.
 
-##Future
+## Future
 I want to create a login system that lets users store their liked and disliked games.
 
