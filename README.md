@@ -19,11 +19,11 @@ Access my site at [https://keen-haupia-db05a7.netlify.app/](https://keen-haupia-
 
 ## Screenshots
 
-![Screenshot 1](https://imgur.com/NPKSAIW)
-![Screenshot 2](https://imgur.com/j9jO7dw)
-![Screenshot 3](https://imgur.com/cQtBel0)
-![Screenshot 4](https://imgur.com/UUb53i1)
-![Screenshot 5](https://imgur.com/bPmZaRv)
+![Screenshot 1](https://i.imgur.com/NPKSAIW.png)
+![Screenshot 2](https://i.imgur.com/bPmZaRv.png)
+![Screenshot 3](https://i.imgur.com/cQtBel0.png)
+![Screenshot 4](https://i.imgur.com/j9jO7dw.png)
+![Screenshot 5](https://i.imgur.com/YbV97Z4.png)
 
 
 ## Technologies Used
