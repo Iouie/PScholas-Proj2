@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Games from "./pages/Games";
+import ErrorPage from "./pages/ErrorPage";
 import GameItem from "./components/GameItem";
 import Giveaway from "./pages/Giveaway";
 import axios from "axios";
@@ -69,10 +70,9 @@ const App = () => {
         />
         <Route
           path="/games/:id"
-          element={
-            <GameItem getParams={changeParams} data={data} getUrl={changeUrl} />
-          }
+          element={<GameItem getParams={changeParams} data={data} />}
         />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );

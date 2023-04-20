@@ -370,3 +370,86 @@ li {
   list-style: none;
   z-index: 2;
 }
+
+.singlegamecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  text-align: center;
+  margin: auto;
+  border-style: solid;
+  padding: 0.5em;
+  z-index: 1;
+  display: flex;
+  gap: 3px;
+  border-color: #93deff;
+
+  &:before {
+    border: inherit;
+    border-width: 0 0.125em;
+    content: "";
+    height: 100%;
+    left: -0.125em;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: -0.125em;
+    z-index: -1;
+  }
+}
+
+.singlegame {
+  width: 55vw;
+  border-radius: 20%;
+}
+
+.longdesc {
+  line-height: 2;
+  color: #fff;
+}
+
+.gameurl {
+  width: 20vw;
+  background-color: #606470;
+  padding: 20px;
+  right: 180px;
+  bottom: 20px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px #93deff;
+
+  &:active {
+    box-shadow: inset $shadow-width $shadow-width 0px 0px #93deff;
+  }
+}
+.gameurl:hover {
+  background: #93deff;
+  cursor: pointer;
+}
+
+.requirements {
+  color: #fff;
+}
+
+h3 {
+  color: #323643;
+}
+
+.minreq {
+  color: #323643;
+  text-decoration: underline;
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

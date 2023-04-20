@@ -41,9 +41,7 @@ const Games = (props) => {
         key={eachGame.id}
         onClick={() => {
           // navigate to GameItem component
-          navigate(`/games/${eachGame.id}`, {
-            state: { id: eachGame.id },
-          });
+          navigate(`/games/${eachGame.id}`);
         }}
       >
         <h2>{eachGame.title}</h2>

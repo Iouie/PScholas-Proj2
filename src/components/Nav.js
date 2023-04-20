@@ -34,8 +34,6 @@ const Nav = (props) => {
           className={clicked === "news" ? "active" : "unclicked"}
           onClick={() => {
             handleClick("news");
-            props.getUrl("latestnews");
-            props.getParams({});
           }}
         >
           NEWS
@@ -46,8 +44,6 @@ const Nav = (props) => {
           className={clicked === "games" ? "active" : "unclicked"}
           onClick={() => {
             handleClick("games");
-            props.getUrl("games");
-            props.getParams({});
           }}
         >
           GAMES
