@@ -32,7 +32,11 @@ const Nav = (props) => {
       <Link to="/news">
         <div
           className={clicked === "news" ? "active" : "unclicked"}
-          onClick={() => handleClick("news")}
+          onClick={() => {
+            handleClick("news");
+            props.getUrl("latestnews");
+            props.getParams({});
+          }}
         >
           NEWS
         </div>
@@ -40,7 +44,11 @@ const Nav = (props) => {
       <Link to="/games">
         <div
           className={clicked === "games" ? "active" : "unclicked"}
-          onClick={() => handleClick("games")}
+          onClick={() => {
+            handleClick("games");
+            props.getUrl("games");
+            props.getParams({});
+          }}
         >
           GAMES
         </div>
@@ -48,7 +56,11 @@ const Nav = (props) => {
       <Link to="/giveaway">
         <div
           className={clicked === "giveaway" ? "active" : "unclicked"}
-          onClick={() => handleClick("giveaway")}
+          onClick={() => {
+            handleClick("giveaway");
+            props.getUrl("giveaways");
+            props.getParams({});
+          }}
         >
           GIVEAWAYS
         </div>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Inputs from "../components/Inputs";
-import GameItem from "../components/GameItem";
 
 const Games = (props) => {
   const itemsPerPage = 20;
@@ -10,6 +9,7 @@ const Games = (props) => {
   const [numPages, setnumPages] = useState(19);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
+  const navigate = useNavigate();
   useEffect(() => {
     props.getUrl("games"); // change url to games so api fetches game
     setSearchTerm("");
@@ -40,7 +40,10 @@ const Games = (props) => {
         className="gameContainer"
         key={eachGame.id}
         onClick={() => {
-          props.getParams({ id: `${eachGame.id}` });
+          // navigate to GameItem component
+          navigate(`/games/${eachGame.id}`, {
+            state: { id: eachGame.id },
+          });
         }}
       >
         <h2>{eachGame.title}</h2>

@@ -15,7 +15,7 @@ const Giveaway = (props) => {
     // map through each of the list and creates this
     return (
       <div
-        className="newsContainer"
+        className="giveawayContainer"
         key={eachGiveaway.id}
         onClick={() => openInNewTab(eachGiveaway.giveaway_url)}
       >

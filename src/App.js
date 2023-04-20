@@ -6,7 +6,8 @@ import Games from "./pages/Games";
 import GameItem from "./components/GameItem";
 import Giveaway from "./pages/Giveaway";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 const App = () => {
   const [data, setData] = useState([]);
   const [url, setUrl] = useState("latestnews");
@@ -22,42 +23,55 @@ const App = () => {
     setParams(p);
   };
 
-  // fetch data from api
-  const options = {
-    method: "GET",
-    url: `https://mmo-games.p.rapidapi.com/${url}`,
-    params: params,
-    headers: {
-      "X-RapidAPI-Key": secret_key,
-      "X-RapidAPI-Host": "mmo-games.p.rapidapi.com",
-    },
-  };
+  useEffect(() => {
+    // fetch data from api
+    const options = {
+      method: "GET",
+      url: `https://mmo-games.p.rapidapi.com/${url}`,
+      params: params,
+      headers: {
+        "X-RapidAPI-Key": secret_key,
+        "X-RapidAPI-Host": "mmo-games.p.rapidapi.com",
+      },
+    };
 
-  axios
-    .request(options)
-    .then(function (response) {
-      setData(response.data); // store this in the news variable
-      //   console.log(response.data);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+    axios
+      .request(options)
+      .then(function (response) {
+        setData(response.data); // store this in the news variable
+        //   console.log(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }, [data]);
 
   return (
     <>
-      <Nav />
+      <Nav getUrl={changeUrl} getParams={changeParams} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News data={data} getUrl={changeUrl} />} />
         <Route
           path="/games"
           element={
-            <Games data={data} getUrl={changeUrl} getParams={changeParams} />
+            <Games
+              data={data}
+              url={url}
+              getUrl={changeUrl}
+              getParams={changeParams}
+            />
           }
         />
         <Route
           path="/giveaway"
           element={<Giveaway data={data} getUrl={changeUrl} />}
+        />
+        <Route
+          path="/games/:id"
+          element={
+            <GameItem getParams={changeParams} data={data} getUrl={changeUrl} />
+          }
         />
       </Routes>
     </>
