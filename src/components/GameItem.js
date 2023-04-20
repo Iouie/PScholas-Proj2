@@ -46,7 +46,7 @@ const GameItem = (props) => {
         // imgRef3.current.src = data.screenshots[2].image;
       })
       .catch(function (error) {
-        navigate(`*`); // navigate to 404 page
+        console.error(error);
       });
   }, [data]);
 
