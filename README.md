@@ -11,19 +11,19 @@ Access my site at [https://keen-haupia-db05a7.netlify.app/](https://keen-haupia-
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Approach](#approach)
-- [Unsolved](#unsolved)
+- [Unsolved Problems](#unsolved)
 - [Future](#future)
 
 ## About The App
-[GAMING GENIE] is an app that utilizes MMOBOMB's API to find all kinds of games on their website along with gaming news and giveaways!
+[GAMING GENIE] is an app that utilizes MMOBomb's API to find all kinds of games on MMOBomb's website along with gaming news and giveaways! Users are able to check the minimum requirements, get the description, and get a link to sign up for whatever game they look through.
 
 ## Screenshots
 
-`[Screenshots](https://imgur.com/NPKSAIW)`
-`[Screenshots](https://imgur.com/j9jO7dw)`
-`[Screenshots](https://imgur.com/cQtBel0)`
-`[Screenshots](https://imgur.com/UUb53i1)`
-`[Screenshots](https://imgur.com/bPmZaRv)`
+![Screenshot 1](https://imgur.com/NPKSAIW)
+![Screenshot 2](https://imgur.com/j9jO7dw)
+![Screenshot 3](https://imgur.com/cQtBel0)
+![Screenshot 4](https://imgur.com/UUb53i1)
+![Screenshot 5](https://imgur.com/bPmZaRv)
 
 
 ## Technologies Used
