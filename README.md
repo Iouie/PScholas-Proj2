@@ -2,7 +2,7 @@
 GAMING GENIE
 
 ## Demo link:
-Access my site at [https://keen-haupia-db05a7.netlify.app/](https://keen-haupia-db05a7.netlify.app/)
+Access my site at [https://dainty-cobbler-2526e0.netlify.app/](https://dainty-cobbler-2526e0.netlify.app/)
 
 ## Table of Content:
 
