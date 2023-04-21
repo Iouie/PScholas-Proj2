@@ -7,7 +7,6 @@ import axios from "axios";
 const GameItem = (props) => {
   const { id } = useParams();
   const [data, setData] = useState([]);
-  const pRef = useRef(null);
   const secret_key = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
@@ -30,7 +29,6 @@ const GameItem = (props) => {
         setData(response.data); // store this in the news variable
         // store data in localstorage
         localStorage.setItem("myData", JSON.stringify(response.data));
-        pRef.current.innerHTML = response.data.description;
       })
       .catch(function (error) {
         console.error(error);
@@ -49,7 +47,10 @@ const GameItem = (props) => {
           <Link to={data.game_url} target="_blank">
             <button className="gameurl">Click Here to Play</button>
           </Link>
-          <p ref={pRef} className="longdesc"></p>
+          <p
+            className="longdesc"
+            dangerouslySetInnerHTML={{ __html: data.description }}
+          />
           <div className="requirements">
             <h2 className="minreq">Minimum Requirements</h2>
             <p>OS: {data["minimum_system_requirements"]["os"]}</p>
@@ -71,7 +72,10 @@ const GameItem = (props) => {
           <Link to={data.game_url} target="_blank">
             <button className="gameurl">Click Here to Play</button>
           </Link>
-          <p ref={pRef} className="longdesc"></p>
+          <p
+            className="longdesc"
+            dangerouslySetInnerHTML={{ __html: data.description }}
+          />
           {/* <SSCarousel screenshots={data.screenshots} /> */}
         </div>
       );
