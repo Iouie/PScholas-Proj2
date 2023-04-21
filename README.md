@@ -42,15 +42,23 @@ Initially, I was struggling to find what API to use. I was thinking of combining
 
 Home => Homepage of my website  
 
-News => Holds all news data from NewsItem component
-Games => Initially holds all game data API sends, users can mess with inputs to filter out games they want
-Giveaway => Holds all current giveaways on MMOBombs websits
-ErrorPage => If user gets cheeky and tries to enter a werid url a 404 page will pop up
+News => Holds all news data from NewsItem component  
 
-**Components**
-GameItem => Component that prints out specific details of a game that a user clicks on
-Inputs => Stores all the inputs and dropdown buttons that lets user filter out their game of choosing
-Nav => A permanent nav bar that lets user navigate to whatever page they want to see
+Games => Initially holds all game data API sends, users can mess with inputs to filter out games they want  
+
+Giveaway => Holds all current giveaways on MMOBombs website  
+
+ErrorPage => If user gets cheeky and tries to enter a werid url a 404 page will pop up  
+
+
+**Components**  
+
+GameItem => Component that prints out specific details of a game that a user clicks on  
+
+Inputs => Stores all the inputs and dropdown buttons that lets user filter out their game of choosing  
+
+Nav => A permanent nav bar that lets user navigate to whatever page they want to see  
+
 NewsItem => Stores each array of news data onto the News page
 
 ## Unsolved Problems
