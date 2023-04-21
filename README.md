@@ -52,6 +52,9 @@ NewsItem => Stores each array of news data onto the News page
 
 ## Unsolved Problems
 I couldn't grab the screenshots of a single game and place it in the carousel.
+Sometimes when I press on a certain game, a lot of the data doesn't load and gives me an undefined.
+Refreshing on any other tab other than home tab gives me a Page not found on Netlify.
+My 404 Page Error doesn't show up when I break url.
 
 ## Future
 I want to create a login system that lets users store their liked and disliked games. I also want to use Redux to manage my states.
