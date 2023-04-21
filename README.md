@@ -1,5 +1,5 @@
-# Project Title
-GAMING GENIE
+# GAMING GENIE
+
 
 ## Demo link:
 Access my site at [https://dainty-cobbler-2526e0.netlify.app/](https://dainty-cobbler-2526e0.netlify.app/)
