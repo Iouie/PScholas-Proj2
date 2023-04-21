@@ -44,7 +44,7 @@ const GameItem = (props) => {
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+  }, [id]);
 
   // console.log(data);
 
