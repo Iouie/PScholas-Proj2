@@ -30,17 +30,21 @@ const GameItem = (props) => {
       .request(options)
       .then(function (response) {
         setData(response.data); // store this in the news variable
+        // store data in localstorage
+        localStorage.setItem("myData", JSON.stringify(response.data));
         pRef.current.innerHTML = response.data.description;
         osRef.current.innerHTML = `<span>OS:</span> ${response.data["minimum_system_requirements"]["os"]} `;
         procRef.current.innerHTML = `<span>Processor:</span> ${response.data["minimum_system_requirements"]["processor"]} `;
         memRef.current.innerHTML = `<span>Memory:</span> ${response.data["minimum_system_requirements"]["memory"]} `;
         gRef.current.innerHTML = `<span>Graphics Card:</span> ${response.data["minimum_system_requirements"]["graphics"]} `;
         sRef.current.innerHTML = `<span>Storage:</span> ${response.data["minimum_system_requirements"]["storage"]} `;
+        const storedData = localStorage.getItem("myData");
+        JSON.parse(storedData);
       })
       .catch(function (error) {
         console.error(error);
       });
-  }, [id]);
+  }, []);
 
   // console.log(data);
 
