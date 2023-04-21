@@ -37,7 +37,7 @@ Access my site at [https://dainty-cobbler-2526e0.netlify.app/](https://dainty-co
 ## Approach
 Initially, I was struggling to find what API to use. I was thinking of combining an NBA and Youtube API to show highlights of a player searched but I needed to pay for an API key for NBA. Then I was thinking of using Polygon.io's stock API to search news based off a ticker that user chooses but that sounded too boring. Ultimately I chose MMOBombs API since it was really easy to understand. I separated components to components and pages.__
 
-**Pages**__
+**Pages**
 Home => Homepage of my website
 News => Holds all news data from NewsItem component
 Games => Initially holds all game data API sends, users can mess with inputs to filter out games they want
