@@ -70,7 +70,7 @@ const App = () => {
         />
         <Route
           path="/games/:id"
-          element={<GameItem getParams={changeParams} data={data} />}
+          element={<GameItem getParams={changeParams} />}
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

@@ -453,3 +453,28 @@ h3 {
   height: 100%;
   object-fit: cover;
 }
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  width: 300%;
+  animation: slide 10s infinite;
+}
+
+.carousel-images img {
+  width: 33.33%;
+  white-space: nowrap;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}

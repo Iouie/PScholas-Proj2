@@ -1,7 +1,6 @@
-import { useParams, useNavigate } from "react-router";
+import { useParams } from "react-router";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-// import Slider from "react-slick";
 import axios from "axios";
 
 const GameItem = (props) => {
@@ -13,10 +12,6 @@ const GameItem = (props) => {
   const memRef = useRef(null);
   const gRef = useRef(null);
   const sRef = useRef(null);
-  const navigate = useNavigate();
-  // const imgRef1 = useRef(null);
-  // const imgRef2 = useRef(null);
-  // const imgRef3 = useRef(null);
   const secret_key = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
@@ -41,37 +36,13 @@ const GameItem = (props) => {
         memRef.current.innerHTML = `<span>Memory:</span> ${response.data["minimum_system_requirements"]["memory"]} `;
         gRef.current.innerHTML = `<span>Graphics Card:</span> ${response.data["minimum_system_requirements"]["graphics"]} `;
         sRef.current.innerHTML = `<span>Storage:</span> ${response.data["minimum_system_requirements"]["storage"]} `;
-        // imgRef1.current.src = data.screenshots[0].image;
-        // imgRef2.current.src = data.screenshots[1].image;
-        // imgRef3.current.src = data.screenshots[2].image;
       })
       .catch(function (error) {
         console.error(error);
       });
-  }, [data]);
+  }, [id]);
 
-  // const Carousel = () => {
-  //   const settings = {
-  //     dots: true,
-  //     infinite: true,
-  //     speed: 500,
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //   };
-  //   return (
-  //     <Slider {...settings}>
-  //       <div>
-  //         <img ref={imgRef1} alt="1" />
-  //       </div>
-  //       <div>
-  //         <img ref={imgRef2} alt="2" />
-  //       </div>
-  //       <div>
-  //         <img ref={imgRef3} alt="3" />
-  //       </div>
-  //     </Slider>
-  //   );
-  // };
+  // console.log(data);
 
   const loading = () => {
     return <h1>Game details loading</h1>;
@@ -88,17 +59,17 @@ const GameItem = (props) => {
         <div className="requirements">
           <h2 className="minreq">Minimum Requirements</h2>
           <p ref={osRef}></p>
+          {/* <p>{data["minimum_system_requirements"]["storage"]}</p> */}
           <p ref={procRef}></p>
           <p ref={memRef}></p>
           <p ref={gRef}></p>
           <p ref={sRef}></p>
         </div>
-        {/* <Carousel /> */}
       </div>
     );
   };
 
-  return props.data ? loaded() : loading();
+  return data ? loaded() : loading();
 };
 
 export default GameItem;
