@@ -27,7 +27,7 @@ Access my site at [https://dainty-cobbler-2526e0.netlify.app/](https://dainty-co
 
 
 ## Technologies Used
-`React`, `JavasScript`, `HTML/CSS`, `Flexbox`
+`React`, `JavasScript`, `HTML/SCSS`, `Flexbox`, `MMOBomb API`
 
 ## Setup
 - download or clone the repository
