@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+// import SSCarousel from "./SSCarousel";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -7,14 +8,11 @@ const GameItem = (props) => {
   const { id } = useParams();
   const [data, setData] = useState([]);
   const pRef = useRef(null);
-  const osRef = useRef(null);
-  const procRef = useRef(null);
-  const memRef = useRef(null);
-  const gRef = useRef(null);
-  const sRef = useRef(null);
   const secret_key = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
+    const storedData = localStorage.getItem("myData");
+    JSON.parse(storedData);
     // fetch data from api
     const options = {
       method: "GET",
@@ -33,44 +31,50 @@ const GameItem = (props) => {
         // store data in localstorage
         localStorage.setItem("myData", JSON.stringify(response.data));
         pRef.current.innerHTML = response.data.description;
-        osRef.current.innerHTML = `<span>OS:</span> ${response.data["minimum_system_requirements"]["os"]} `;
-        procRef.current.innerHTML = `<span>Processor:</span> ${response.data["minimum_system_requirements"]["processor"]} `;
-        memRef.current.innerHTML = `<span>Memory:</span> ${response.data["minimum_system_requirements"]["memory"]} `;
-        gRef.current.innerHTML = `<span>Graphics Card:</span> ${response.data["minimum_system_requirements"]["graphics"]} `;
-        sRef.current.innerHTML = `<span>Storage:</span> ${response.data["minimum_system_requirements"]["storage"]} `;
-        const storedData = localStorage.getItem("myData");
-        JSON.parse(storedData);
       })
       .catch(function (error) {
         console.error(error);
       });
-  }, [id]);
-
-  // console.log(data);
+  }, []);
 
   const loading = () => {
     return <h1>Game details loading</h1>;
   };
   const loaded = () => {
-    return (
-      <div className="singlegamecontainer" key={data.id}>
-        <h1>{data.title}</h1>
-        <img src={data.thumbnail} className="singlegame" alt={data.title} />
-        <Link to={data.game_url} target="_blank">
-          <button className="gameurl">Click Here to Play</button>
-        </Link>
-        <p ref={pRef} className="longdesc"></p>
-        <div className="requirements">
-          <h2 className="minreq">Minimum Requirements</h2>
-          <p ref={osRef}></p>
-          {/* <p>{data["minimum_system_requirements"]["storage"]}</p> */}
-          <p ref={procRef}></p>
-          <p ref={memRef}></p>
-          <p ref={gRef}></p>
-          <p ref={sRef}></p>
+    if (data.hasOwnProperty("minimum_system_requirements")) {
+      return (
+        <div className="singlegamecontainer" key={data.id}>
+          <h1>{data.title}</h1>
+          <img src={data.thumbnail} className="singlegame" alt={data.title} />
+          <Link to={data.game_url} target="_blank">
+            <button className="gameurl">Click Here to Play</button>
+          </Link>
+          <p ref={pRef} className="longdesc"></p>
+          <div className="requirements">
+            <h2 className="minreq">Minimum Requirements</h2>
+            <p>OS: {data["minimum_system_requirements"]["os"]}</p>
+            <p>Processor: {data["minimum_system_requirements"]["processor"]}</p>
+            <p>Memory: {data["minimum_system_requirements"]["memory"]}</p>
+            <p>
+              Graphics Card: {data["minimum_system_requirements"]["graphics"]}
+            </p>
+            <p>Storage: {data["minimum_system_requirements"]["storage"]}</p>
+          </div>
+          {/* <SSCarousel screenshots={data.screenshots} /> */}
         </div>
-      </div>
-    );
+      );
+    } else
+      return (
+        <div className="singlegamecontainer" key={data.id}>
+          <h1>{data.title}</h1>
+          <img src={data.thumbnail} className="singlegame" alt={data.title} />
+          <Link to={data.game_url} target="_blank">
+            <button className="gameurl">Click Here to Play</button>
+          </Link>
+          <p ref={pRef} className="longdesc"></p>
+          {/* <SSCarousel screenshots={data.screenshots} /> */}
+        </div>
+      );
   };
 
   return data ? loaded() : loading();
