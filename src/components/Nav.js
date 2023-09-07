@@ -20,7 +20,10 @@ const Nav = (props) => {
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav
+      className=" md:text-3xl flex md:justify-around md:space-x-4 bg-[#243c5a]
+      text-xs space-x-1"
+    >
       <Link to="/">
         <div
           className={clicked === "home" ? "active" : "unclicked"}

@@ -10,6 +10,10 @@ $alt-sec-button-background: #568ce2;
 $alt-shadow-color: grey;
 $menu_WIDTH: 150px;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   background-color: #606470;
   padding: 0;
@@ -22,17 +26,6 @@ body {
 @font-face {
   font-family: "2P";
   src: url("./fonts/PressStart2P.ttf") format("truetype");
-}
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 5rem;
-  font-size: 2rem;
-  background-color: #323643;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 a {
