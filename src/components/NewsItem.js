@@ -15,7 +15,7 @@ const NewsItem = (props) => {
     // map through each of the list and creates this
     return (
       <div
-        className="newsContainer"
+        className="flex flex-col items-center mx-auto md:flex-row p-4 gap-x-4 my-2 w-2/3 border-dotted border-2 border-sky-500 hover:bg-sky-700 cursor-pointer"
         key={eachNews.id}
         onClick={() => openInNewTab(eachNews.article_url)}
       >
@@ -24,9 +24,9 @@ const NewsItem = (props) => {
           className="thumbnail"
           alt={eachNews.title}
         />
-        <div className="details">
-          <h2 className="newstitle">{eachNews.title}</h2>
-          <p className="description">{eachNews.short_description}</p>
+        <div className="py-4 text-center">
+          <h2 className=" mb-4 text-base">{eachNews.title}</h2>
+          <p className="text-xs text-white">{eachNews.short_description}</p>
         </div>
       </div>
     );

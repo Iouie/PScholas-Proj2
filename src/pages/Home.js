@@ -27,13 +27,21 @@ const Home = () => {
 
   return (
     <>
-      <div className="home">
-        <div className="left">
-          <img src={Genie} alt="GenieGif"></img>
-        </div>
-        <div className="right">
-          <h2>GET THE LATEST</h2>
-          <h2 style={animationStyle} className="alttext">
+      <div
+        className="flex flex-col justify-center items-center gap-y-6
+      md:flex-row"
+      >
+        <img
+          src={Genie}
+          alt="GenieGif"
+          className="w-1/2 h-1/2 md:w-1/3 md:h-1/3 mt-[10rem]"
+        ></img>
+        <div className="flex flex-col justify-center items-center md:mt-48">
+          <h2 className="text-lg text-center md:text-4xl">GET THE LATEST</h2>
+          <h2
+            style={animationStyle}
+            className="text-[#93deff] mt-4 text-center text-lg md:mt-0 md:text-4xl md:pt-20"
+          >
             {texts[textIndex]}
           </h2>
         </div>
