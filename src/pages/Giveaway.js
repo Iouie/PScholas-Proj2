@@ -15,19 +15,34 @@ const Giveaway = (props) => {
     // map through each of the list and creates this
     return (
       <div
-        className="giveawayContainer"
+        className="flex border-dotted border-2 flex-col items-center my-4 mx-auto border-sky-500 hover:bg-sky-700 cursor-pointer w-2/3"
         key={eachGiveaway.id}
         onClick={() => openInNewTab(eachGiveaway.giveaway_url)}
       >
         <img
           src={eachGiveaway.thumbnail}
-          className="thumbnail"
+          className="w-[20rem]"
           alt={eachGiveaway.title}
         />
-        <div className="details">
-          <h2 className="newstitle">{eachGiveaway.title}</h2>
-          <p className="description">{eachGiveaway.short_description}</p>
-          <p className="keysleft">Keys Left: {eachGiveaway.keys_left}</p>
+        <div className="flex flex-col gap-y-2">
+          <h2 className="text-center  text-[0.6rem] md:text-[1.2rem]">
+            {eachGiveaway.title}
+          </h2>
+          <p className="text-white text-center text-[0.6rem] md:text-[.8rem]">
+            {eachGiveaway.short_description}
+          </p>
+          <p className="text-center">
+            Keys Left:
+            <span
+              className={` text-[.6rem] md:text-[.8rem] ${
+                parseFloat(eachGiveaway.keys_left) < 50
+                  ? "text-red-700"
+                  : "text-green-700"
+              }`}
+            >
+              {eachGiveaway.keys_left}
+            </span>
+          </p>
         </div>
       </div>
     );

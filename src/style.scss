@@ -87,11 +87,11 @@ span {
   color: black;
 }
 
-.gamethumbnail {
-  width: auto;
-  height: auto;
-  border-radius: 20%;
-}
+// .gamethumbnail {
+//   width: auto;
+//   height: auto;
+//   border-radius: 20%;
+// }
 
 // .previousbutton,
 // .nextbutton {
@@ -156,16 +156,16 @@ span {
 //   }
 // }
 
-.nextbutton {
-  z-index: 100;
-  position: fixed;
-  left: 200px;
-}
+// .nextbutton {
+//   z-index: 100;
+//   position: fixed;
+//   left: 200px;
+// }
 
-.previousbutton {
-  position: fixed;
-  z-index: 100;
-}
+// .previousbutton {
+//   position: fixed;
+//   z-index: 100;
+// }
 
 // .main li {
 //   list-style: none;
@@ -207,36 +207,36 @@ span {
   -webkit-transform: perspective(350px) rotateX(0deg);
 }*/
 
-.hov:hover li:nth-child(odd) {
-  -webkit-transform-origin: top;
-  -webkit-transform: perspective(350px) rotateX(0deg);
-  margin-top: 0;
-}
+// .hov:hover li:nth-child(odd) {
+//   -webkit-transform-origin: top;
+//   -webkit-transform: perspective(350px) rotateX(0deg);
+//   margin-top: 0;
+// }
 
-.hov:hover li:nth-child(even) {
-  -webkit-transform-origin: bottom;
-  -webkit-transform: perspective(350px) rotateX(0deg);
-  margin-top: 0;
-}
+// .hov:hover li:nth-child(even) {
+//   -webkit-transform-origin: bottom;
+//   -webkit-transform: perspective(350px) rotateX(0deg);
+//   margin-top: 0;
+// }
 
-.main li:first-child {
-  margin-top: 0;
-}
+// .main li:first-child {
+//   margin-top: 0;
+// }
 
-.hov {
-  position: relative;
-  height: 40px;
-  width: 112px;
-  background: #323643;
-  color: white;
-  font-size: 13px;
-  font-family: Helvetica;
-  font-weight: bold;
-  text-align: center;
-  line-height: 40px;
-  list-style: none;
-  z-index: 2;
-}
+// .hov {
+//   position: relative;
+//   height: 40px;
+//   width: 112px;
+//   background: #323643;
+//   color: white;
+//   font-size: 13px;
+//   font-family: Helvetica;
+//   font-weight: bold;
+//   text-align: center;
+//   line-height: 40px;
+//   list-style: none;
+//   z-index: 2;
+// }
 
 .singlegamecontainer {
   display: flex;
