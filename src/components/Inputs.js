@@ -14,6 +14,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ "sort-by": "relevance" });
             }}
           >
@@ -24,6 +25,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ "sort-by": "alphabetical" });
             }}
           >
@@ -34,6 +36,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ "sort-by": "release-date" });
             }}
           >
@@ -44,6 +47,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ "sort-by": "popularity" });
             }}
           >
@@ -57,6 +61,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "mmorpg" });
             }}
           >
@@ -67,6 +72,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "mmo" });
             }}
           >
@@ -77,6 +83,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "fantasy" });
             }}
           >
@@ -87,6 +94,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "tower-defense" });
             }}
           >
@@ -97,6 +105,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "shooter" });
             }}
           >
@@ -107,6 +116,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "moba" });
             }}
           >
@@ -117,6 +127,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "racing" });
             }}
           >
@@ -127,6 +138,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "sports" });
             }}
           >
@@ -137,6 +149,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "sandbox" });
             }}
           >
@@ -147,6 +160,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "open-world" });
             }}
           >
@@ -157,6 +171,7 @@ const Inputs = (props) => {
           <li
             className="hover:bg-sky-700"
             onClick={() => {
+              props.setCurrentPage(1);
               props.getParams({ category: "battle-royale" });
             }}
           >
